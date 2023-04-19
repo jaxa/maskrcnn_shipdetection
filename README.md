@@ -18,10 +18,12 @@ $ docker build -t mask-rcnn .
 $ docker run -it --rm --name mrc mask-rcnn
 ```
 
-
 ## Dependency
 - Python
   -  [Python3.7](https://www.python.org/)
+
+## License
+This project is under the Apache 2.0 license. See LICENSE.txt.
 
 ## Reference 
 https://www.kaggle.com/code/hmendonca/airbus-mask-rcnn-and-coco-transfer-learning  

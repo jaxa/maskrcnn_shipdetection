@@ -1,22 +1,31 @@
+"""
+Mask R-CNN for Ship Detection
+Ship detection model for benchmark
+Copyright (c) 2023 Japan Aerospace Explration Agency.
+All Rights Reserved.
+
+This file is coverd by the LICENSE.txt in the root of this project.
+"""
+
 # debug = True
 debug = False
 
-import os
 import csv
+import os
 import time
-import numpy as np
-import pandas as pd 
+import warnings
 
-from mrcnn.config import Config
-from mrcnn import utils
 import mrcnn.model as modellib
-
+import numpy as np
+import pandas as pd
+from mrcnn import utils
+from mrcnn.config import Config
 from skimage.io import imread
 from skimage.morphology import label
+from sklearn.model_selection import train_test_split
+
 import gc; gc.enable() # memory is tight
 
-from sklearn.model_selection import train_test_split
-import warnings 
 
 
 os.environ['CUDA_VISIBLE_DEVICES']="1"

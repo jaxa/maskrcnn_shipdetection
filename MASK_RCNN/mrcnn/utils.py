@@ -1,27 +1,34 @@
 """
-Mask R-CNN
-Common utility functions and classes.
+Mask R-CNN for Ship Detection
+Ship detection model for benchmark
+Copyright (c) 2023 Japan Aerospace Explration Agency.
+All Rights Reserved.
 
+This file is coverd by the LICENSE.txt in the root of this project.
+
+Base on the follwing code:
+Mask R-CNN Common utility functions and classes.
 Copyright (c) 2017 Matterport, Inc.
 Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
 """
 
-import sys
-import os
 import logging
 import math
+import os
 import random
+import shutil
+import sys
+import urllib.request
+import warnings
+from distutils.version import LooseVersion
+
 import numpy as np
-import tensorflow as tf
 import scipy
 import skimage.color
 import skimage.io
 import skimage.transform
-import urllib.request
-import shutil
-import warnings
-from distutils.version import LooseVersion
+import tensorflow as tf
 
 # URL from which to download the latest COCO trained weights
 COCO_MODEL_URL = "https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5"

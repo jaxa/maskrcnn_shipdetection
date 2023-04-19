@@ -1,7 +1,13 @@
 """
-Mask R-CNN
-Multi-GPU Support for Keras.
+Mask R-CNN for Ship Detection
+Ship detection model for benchmark
+Copyright (c) 2023 Japan Aerospace Explration Agency.
+All Rights Reserved.
 
+This file is coverd by the LICENSE.txt in the root of this project.
+
+Base on the follwing code:
+Mask R-CNN Common utility functions and classes.
 Copyright (c) 2017 Matterport, Inc.
 Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
@@ -13,10 +19,10 @@ https://github.com/avolkov1/keras_experiments/blob/master/keras_exp/multigpu/
 https://github.com/fchollet/keras/blob/master/keras/utils/training_utils.py
 """
 
-import tensorflow as tf
 import keras.backend as K
 import keras.layers as KL
 import keras.models as KM
+import tensorflow as tf
 
 
 class ParallelModel(KM.Model):
@@ -112,8 +118,9 @@ if __name__ == "__main__":
     # python3 parallel_model.py
 
     import os
-    import numpy as np
+
     import keras.optimizers
+    import numpy as np
     from keras.datasets import mnist
     from keras.preprocessing.image import ImageDataGenerator
 

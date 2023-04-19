@@ -1,24 +1,30 @@
 """
-Mask R-CNN
-Display and Visualization Functions.
+Mask R-CNN for Ship Detection
+Ship detection model for benchmark
+Copyright (c) 2023 Japan Aerospace Explration Agency.
+All Rights Reserved.
 
+This file is coverd by the LICENSE.txt in the root of this project.
+
+Base on the follwing code:
+Mask R-CNN Common utility functions and classes.
 Copyright (c) 2017 Matterport, Inc.
 Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
 """
 
-import os
-import sys
-import random
-import itertools
 import colorsys
+import itertools
+import os
+import random
+import sys
 
-import numpy as np
-from skimage.measure import find_contours
-import matplotlib.pyplot as plt
-from matplotlib import patches,  lines
-from matplotlib.patches import Polygon
 import IPython.display
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import lines, patches
+from matplotlib.patches import Polygon
+from skimage.measure import find_contours
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
@@ -26,7 +32,6 @@ ROOT_DIR = os.path.abspath("../")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
 from mrcnn import utils
-
 
 ############################################################
 #  Visualization
